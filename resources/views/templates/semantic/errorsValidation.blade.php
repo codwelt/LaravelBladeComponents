@@ -1,9 +1,10 @@
 @if($errors->any())
     @component(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT."::templates.core.semantic.message.with_closed",['type' => "negative"])
         @slot("title")
-            Errores
+            @isset($title)
+                {{$title}}
+            @endisset
         @endslot
-
         <ul class="list">
             @foreach($errors->all() as $error)
                 <li>{{$error}}.</li>

@@ -13,6 +13,8 @@ return [
     |
     */
 
-    'submit' => "Enviar"
+    'submit' => "Enviar",
+    'forgot_password' => "Olvido la Contraseña?",
+    "remember" => "Recordarme"
 
 ];

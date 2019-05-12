@@ -31,18 +31,30 @@
                     @csrf
                     <div class="ui stacked segment">
                         <div class="field">
-                            <div class="ui left icon input">
+                            <div class="ui left icon  {{ $errors->has('email') ? 'error' : '' }} input">
                                 <i class="user icon"></i>
-                                <input type="text" name="username" placeholder="UserName">
+                                <input type="text" name="email" value="{{ old('email') }}" placeholder="email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <div class="ui left icon input">
+                            <div class="ui left icon {{ $errors->has('password') ? 'error' : '' }} input" required>
                                 <i class="lock icon"></i>
                                 <input type="password" name="password" placeholder="Password">
                             </div>
                         </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <label>@lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.remember")</label>
+                            </div>
+                        </div>
+
                         <button class="ui fluid large orange submit button" type="submit">@lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.submit")</button>
+                        @if (Route::has('password.request'))
+                            <a href="{{ route('password.request') }}">
+                                @lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.forgot_password")
+                            </a>
+                        @endif
                     </div>
                 </form>
             </div>
