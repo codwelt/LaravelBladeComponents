@@ -32,16 +32,16 @@
                 <form class="ui large form" action="{{$action}}" method="POST">
                     @csrf
                     <div class="ui stacked segment">
-                        <div class="field">
-                            <div class="ui left icon  {{ $errors->has('email') ? 'error' : '' }} input">
+                        <div class="field {{ $errors->has('email') ? 'error' : '' }} ">
+                            <div class="ui left icon input">
                                 <i class="user icon"></i>
-                                <input type="text" name="email" value="{{ old('email') }}" placeholder="email" required>
+                                <input type="text" name="email" value="{{ old('email') }}" placeholder="Email" required>
                             </div>
                         </div>
-                        <div class="field">
-                            <div class="ui left icon {{ $errors->has('password') ? 'error' : '' }} input" required>
+                        <div class="field {{ $errors->has('password') ? 'error' : '' }}">
+                            <div class="ui left icon  input">
                                 <i class="lock icon"></i>
-                                <input type="password" name="password" placeholder="Password">
+                                <input type="password" name="password" placeholder="Password" required>
                             </div>
                         </div>
                         <div class="field">
