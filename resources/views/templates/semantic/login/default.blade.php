@@ -20,7 +20,7 @@
     <div class="ui container">
         <div class="ui middle aligned center aligned grid">
             <div class="column">
-                <h2 class="ui orange image header">
+                <h2 class="ui {{isset($color_form) ? $color_form : "teal"}} image header">
                     <img src="" class="image">
                     <div class="content">
                         {{$title_panel}}
@@ -49,7 +49,7 @@
                             </div>
                         </div>
 
-                        <button class="ui fluid large orange submit button" type="submit">@lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.submit")</button>
+                        <button class="ui fluid large {{isset($color_form) ? $color_form : "teal"}} submit button" type="submit">@lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.submit")</button>
                         @if (Route::has('password.request'))
                             <a href="{{ route('password.request') }}">
                                 @lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.forgot_password")
