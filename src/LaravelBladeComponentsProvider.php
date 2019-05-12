@@ -14,12 +14,12 @@ class LaravelBladeComponentsProvider extends ServiceProvider{
     {
 
         //Carga de laas vistas
-        $this->loadViewsFrom(__DIR__."Views",self::NAMESPACE_PROYECT);
+        $this->loadViewsFrom(__DIR__."/Views",self::NAMESPACE_PROYECT);
 
         //Se publiquen los resources
         $this->publishes([
             realpath(__DIR__.'/public') => public_path(self::NAMESPACE_PROYECT),
-        ], self::NAMESPACE_PROYECT);
+        ], self::NAMESPACE_PROYECT . "_assets") ;
 
         $this->registerHelpers();
     }
