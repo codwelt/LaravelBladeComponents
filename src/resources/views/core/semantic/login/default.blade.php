@@ -6,8 +6,8 @@
                 Autenticacion Administrador
             </div>
         </h2>
-        @include('Partes.ErrroresValidation')
-        <form class="ui large form" action="{{route('admin.login.login')}}" method="POST">
+        @include(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::templates.errorsValidation")
+        <form class="ui large form" action="{{$action}}" method="POST">
             @csrf
             <div class="ui stacked segment">
                 <div class="field">
@@ -22,7 +22,7 @@
                         <input type="password" name="password" placeholder="Password">
                     </div>
                 </div>
-                <button class="ui fluid large orange submit button" type="submit">Login</button>
+                <button class="ui fluid large orange submit button" type="submit">{{ __(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.submit") }}</button>
             </div>
         </form>
 

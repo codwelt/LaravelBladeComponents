@@ -1,5 +1,5 @@
 @if($errors->any())
-    @component(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT."::Templates.Core.SemanticUI.message.with-closed",['type' => "negative"])
+    @component(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT."::templates.core.semantic.message.with-closed",['type' => "negative"])
         @slot("title")
             Errores
         @endslot

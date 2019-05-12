@@ -14,7 +14,12 @@ class LaravelBladeComponentsProvider extends ServiceProvider{
     {
 
         //Carga de laas vistas
-        $this->loadViewsFrom(__DIR__."/Views",self::NAMESPACE_PROYECT);
+        $this->loadViewsFrom(__DIR__ . "/resources/views",self::NAMESPACE_PROYECT);
+
+
+        //Registrar Lenguaje del paquete
+
+        $this->app["lang"]->addNamespace(self::NAMESPACE_PROYECT, __DIR__ . "/resources/lang");
 
         //Se publiquen los resources
         $this->publishes([
@@ -22,12 +27,13 @@ class LaravelBladeComponentsProvider extends ServiceProvider{
         ], self::NAMESPACE_PROYECT . "_assets") ;
 
         $this->registerHelpers();
+
     }
 
 
     private function registerHelpers()
     {
-        foreach (glob(__DIR__. "/Helpers/*.php") as $filename){
+        foreach (glob(__DIR__ . "/helpers/*.php") as $filename){
             require_once $filename;
         }
 
