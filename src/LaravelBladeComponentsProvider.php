@@ -14,18 +14,24 @@ class LaravelBladeComponentsProvider extends ServiceProvider{
     {
 
         //Carga de laas vistas
-        $this->loadViewsFrom(__DIR__ . "/resources/views",self::NAMESPACE_PROYECT);
+        $this->loadViewsFrom(__DIR__ . "/../resources/views",self::NAMESPACE_PROYECT);
 
 
         //Registrar Lenguaje del paquete
 
-        $this->loadTranslationsFrom(__DIR__ . "/resources/lang", self::NAMESPACE_PROYECT);
+        $this->loadTranslationsFrom(__DIR__ . "/../resources/lang", self::NAMESPACE_PROYECT);
 
 
         //Se publiquen los resources
         $this->publishes([
-            realpath(__DIR__.'/public') => public_path(self::NAMESPACE_PROYECT),
+            realpath(__DIR__ . '/public') => public_path(self::NAMESPACE_PROYECT),
         ], self::NAMESPACE_PROYECT . "_assets") ;
+
+        //Por si los usuarios quieren modificar los mensajes de los lenguajes
+        $this->publishes([
+            realpath(__DIR__. '/../resources/lang') => resource_path("lang/vendor/" . self::NAMESPACE_PROYECT),
+        ], self::NAMESPACE_PROYECT . "_lang") ;
+
 
         $this->registerHelpers();
 
@@ -34,7 +40,7 @@ class LaravelBladeComponentsProvider extends ServiceProvider{
 
     private function registerHelpers()
     {
-        foreach (glob(__DIR__ . "/helpers/*.php") as $filename){
+        foreach (glob(__DIR__ . "/../helpers/*.php") as $filename){
             require_once $filename;
         }
 

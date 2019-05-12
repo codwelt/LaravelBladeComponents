@@ -24,7 +24,7 @@
                 <h2 class="ui orange image header">
                     <img src="" class="image">
                     <div class="content">
-                        Autenticacion Administrador
+                        {{$title_panel}}
                     </div>
                 </h2>
                 @include(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::templates.semantic.errorsValidation")
@@ -46,7 +46,6 @@
                         <button class="ui fluid large orange submit button" type="submit">@lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.submit")</button>
                     </div>
                 </form>
-
             </div>
         </div>
 
