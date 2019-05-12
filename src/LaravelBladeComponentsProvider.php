@@ -19,7 +19,8 @@ class LaravelBladeComponentsProvider extends ServiceProvider{
 
         //Registrar Lenguaje del paquete
 
-        $this->app["lang"]->addNamespace(self::NAMESPACE_PROYECT, __DIR__ . "/resources/lang");
+        $this->loadJsonTranslationsFrom(__DIR__ . "/resources/lang", self::NAMESPACE_PROYECT);
+                
 
         //Se publiquen los resources
         $this->publishes([
