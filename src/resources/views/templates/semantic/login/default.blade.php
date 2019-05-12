@@ -6,7 +6,7 @@
                 Autenticacion Administrador
             </div>
         </h2>
-        @include(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::templates.errorsValidation")
+        @include(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::templates.semantic.errorsValidation")
         <form class="ui large form" action="{{$action}}" method="POST">
             @csrf
             <div class="ui stacked segment">
