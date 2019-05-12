@@ -22,7 +22,7 @@
                         <input type="password" name="password" placeholder="Password">
                     </div>
                 </div>
-                <button class="ui fluid large orange submit button" type="submit">{{ __(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.submit") }}</button>
+                <button class="ui fluid large orange submit button" type="submit">@lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.submit")</button>
             </div>
         </form>
 
