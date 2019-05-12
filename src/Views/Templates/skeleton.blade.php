@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('page_name')</title>
+    <title>@yield('title')</title>
 
 
     <link href="{{laravel_blade_components_asset('/semantic/semantic.css')}}" rel="stylesheet">
