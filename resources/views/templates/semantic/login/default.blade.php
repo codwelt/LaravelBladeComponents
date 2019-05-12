@@ -1,6 +1,5 @@
 @extends("laravel_blade_components::templates.semantic.skeleton")
 @section("title",config('app.name',"Comidas Rapidas"))
-
 @section("header")
     <style type="text/css">
         body {
