@@ -1,0 +1,30 @@
+{
+    "name": "codwelt/laravel-blade-components",
+    "description": "Componentes de Laravel con Estilo de Bootstrap y semanticUI",
+    "require": {
+        "laravelcollective/html": "^5.8",
+        "laravel/framework": "^5.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FuriosoJack",
+            "email": "iam@furiosojack.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Codwelt\\LaravelBladeComponents\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Collective\\Html\\HtmlServiceProvider",
+                "Codwelt\\LaravelBladeComponents\\LaravelBladeComponentsProvider"
+            ]
+        }
+    }
+
+}
