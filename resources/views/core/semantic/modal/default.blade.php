@@ -1,11 +1,15 @@
 <div id="{{isset($id) ? $id : ""}}" class="ui {{isset($size) ? $size : ""}} modal">
     @isset($header)
-    {{$header}}
+        <div class="header">{{$header}}</div>
     @endisset
-    <div class="content">
-        {{$slot}}
-    </div>
+    @isset($content)
+            <div class="content">
+                {{$content}}
+            </div>
+     @endisset
         @isset($actions)
+        <div class="actions">
             {{$actions}}
+        </div>
         @endisset
 </div>
