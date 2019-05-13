@@ -15,6 +15,8 @@ return [
 
     'submit' => "Enviar",
     'forgot_password' => "Olvido la Contraseña?",
-    "remember" => "Recordarme"
+    "remember" => "Recordarme",
+    "register" => "Registrate",
+    "animated_register" => "¿Eres Nuevo?"
 
 ];

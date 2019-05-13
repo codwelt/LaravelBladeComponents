@@ -59,6 +59,9 @@
                         @endif
                     </div>
                 </form>
+                <div class="ui message">
+                    @lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.animated_register")? <a href="{{$route_register}}">@lang(\Codwelt\LaravelBladeComponents\LaravelBladeComponentsProvider::NAMESPACE_PROYECT . "::login.register")</a>
+                </div>
             </div>
         </div>
 
